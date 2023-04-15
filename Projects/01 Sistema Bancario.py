@@ -268,43 +268,24 @@ while operacao_principal == "inicie":
     while reset_programa == "inicie":
        
         print("\nDeseja realizar uma nova operação ?\n[01] Sim\n[02] Não")
-        reset_operecao_principal = int(input(""))
+        reset_operecao_principal = input("\n<< ")
     
+        if reset_operecao_principal.isdigit():
+            reset_operecao_principal = int(reset_operecao_principal)
 
 
-        if reset_operecao_principal == 1:
-            reset_programa = "pare"
-            operacao_principal = "inicie"
-    
-        elif reset_operecao_principal == 2:
-            print("\nObrigado Volte Sempre!")
-            reset_programa = "pare"
-            operacao_principal = "pare"
-
-        else:                      
-            reset_operecao_principal = 0
-
-
-
-
-        while reset_operecao_principal == 0:
-        
-            print("\nOpção Inválida !\n")
-            print("\nDeseja realizar uma nova operação ?\n[01] Sim\n[02] Não")
-            reset_operecao_principal = int(input(""))
-
-            
             if reset_operecao_principal == 1:
-                reset_programa = "pare" 
+                reset_programa = "pare"
                 operacao_principal = "inicie"
         
-            elif reset_operecao_principal == 2:                
+            elif reset_operecao_principal == 2:
                 print("\nObrigado Volte Sempre!")
                 reset_programa = "pare"
                 operacao_principal = "pare"
-
-            else:
-                reset_operecao_principal = 0
             
-
-    
+            else: 
+                print('Número Inválido !') 
+        
+        
+        else: 
+            print('Opção Inválida! XML')
