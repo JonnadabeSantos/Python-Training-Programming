@@ -2,6 +2,13 @@ cheque_especial = 600
 saldo_conta_corrente = 2000
 saldo_conta_universitaria = 950
 
+menu = """
+[01] Conta Corrente 
+[02] Conta Universitária
+
+Selecione o Tipo de conta: """
+
+
 operacao_principal = "inicie"
 while operacao_principal == "inicie":
 
@@ -13,15 +20,13 @@ while operacao_principal == "inicie":
     conta_universitaria = False      
 
 
-
-  
-    selecione_conta = int(input(
-"""
-[01] Conta Corrente 
-[02] Conta Universitária
-
-Selecione o Tipo de conta: """))
-
+# Validação Funcionou ==============================
+   
+    selecione_conta = input(f'{menu} ')
+    if selecione_conta.isdigit():
+        selecione_conta = int(selecione_conta)
+        
+#====================================================
 
     if selecione_conta == 1:
         conta_corrente = True    
