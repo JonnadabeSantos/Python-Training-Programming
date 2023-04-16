@@ -1,0 +1,18 @@
+n1 = 'valdomiro silva cacete'
+n2 = 'metimozerque napomuceno cardoso cavalcante'
+n3 = 'josadarque pereira de pinto sega'
+
+print(len(n1))
+print(len(n2))
+
+print(n1.upper(),'\n')
+print(n1.lower(),'\n')
+
+print(len(n1.replace(n1,'valdomirosilvacacete\n')))
+
+def remove(n2): 
+    return "".join(n2.split()) 
+      
+
+print(len(remove(n2))) 
+

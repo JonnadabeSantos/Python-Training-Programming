@@ -1,18 +1,19 @@
 
-# Geral
+# General
 def remove(string): 
     return "".join(string.split()) 
-      
+
+# Declaring the variable      
 string = ' g e e k '
-print(remove(string)) 
+print(remove(string),'\n') 
 
 
-# Aplicação
+# Aplication
 
 n2 = 'metimozerque napomuceno cardoso cavalcante'
 
 def remove(n2): 
-    return "-".join(n2.split()) 
+    return "".join(n2.split()) 
       
-n2 = n2
-print(remove(n2)) 
+# Not declared
+print(remove(n2),'\n') 
