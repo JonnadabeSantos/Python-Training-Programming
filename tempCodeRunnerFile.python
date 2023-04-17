@@ -1,18 +1,14 @@
-n1 = 'valdomiro silva cacete'
-n2 = 'metimozerque napomuceno cardoso cavalcante'
-n3 = 'josadarque pereira de pinto sega'
+numero = int(input('Digite um numero entre 0 a 9999: '))
+unidade = numero % 10
 
-print(len(n1))
-print(len(n2))
+numero = ( numero - unidade ) / 10
+dezena = int(numero % 10)
 
-print(n1.upper(),'\n')
-print(n1.lower(),'\n')
+numero = ( numero - dezena ) / 10
+centena = int( numero % 10 )
 
-print(len(n1.replace(n1,'valdomirosilvacacete\n')))
+numero = ( numero - centena ) / 10
+milhar = int( numero % 10 )
 
-def remove(n2): 
-    return "".join(n2.split()) 
-      
 
-print(len(remove(n2))) 
-
+print(f'Este número tem {milhar} milhar, {centena} centena, {dezena} dezena, {unidade} unidade.')
