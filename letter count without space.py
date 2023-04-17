@@ -7,3 +7,5 @@ print(f'Seu primeiro nome é {separa[0]} e tem {len(separa[0])} letras')
 # Or
 
 print('Your fist name have {} latters'.format(nome.find(' ')))
+
+# The (name.find(' ') will count how many letters there are up to the first space
