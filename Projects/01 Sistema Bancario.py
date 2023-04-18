@@ -73,7 +73,7 @@ while operacao_principal == "inicie":
 #=============================================================================================================================
 
                 
-                if operacao_conta_corrente >= 1 and operacao_conta_corrente <= 4:
+                if operacao_conta_corrente > 0 and operacao_conta_corrente < 5:
                     reset_operacao_conta_corrente = "pare"
                   
                 if operacao_conta_corrente == 1:
@@ -104,7 +104,7 @@ while operacao_principal == "inicie":
                                 
                                 reset_sim_ou_nao = "inicie"
                                 while reset_sim_ou_nao == "inicie":
-                                    continuar_saque = input("Escreva sim ou não: ").lower()
+                                    continuar_saque = input("Escreva sim ou não: ").lower() .strip()
                                                               
 
                                     if continuar_saque == "sim":
@@ -188,10 +188,14 @@ while operacao_principal == "inicie":
                     print("\nSaldo de Cheque Especial Selecionado! \n")
                     print("Seu saldo em cheque especial é",cheque_especial,"\n")
                     reset_programa = "inicie"
+
                     
-                    
+                        
                 else:
-                    print("\nOperação Inválida!") 
+                    print("\nNúmero Inválido!") 
+                    
+            else:
+                print("\nOpção Inválida!") 
             
 
 
@@ -268,7 +272,7 @@ while operacao_principal == "inicie":
     while reset_programa == "inicie":
        
         print("\nDeseja realizar uma nova operação ?\n[01] Sim\n[02] Não")
-        reset_operecao_principal = input("\n<< ")
+        reset_operecao_principal = input("\n ")
     
         if reset_operecao_principal.isdigit():
             reset_operecao_principal = int(reset_operecao_principal)
@@ -288,4 +292,4 @@ while operacao_principal == "inicie":
         
         
         else: 
-            print('Opção Inválida! XML')
+            print('Opção Inválida!')
