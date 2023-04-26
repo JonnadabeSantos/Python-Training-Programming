@@ -6,4 +6,4 @@ for n in range ( 1, 7):
     if number % 2 == 0:
         soma += number
         
-print(f'\nA soma dos numeros pares são {soma}')
+print(f'\nsum of even numbers are {soma}')

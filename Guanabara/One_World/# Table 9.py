@@ -1,11 +1,6 @@
-# Table 9
+table = int(input('Type Number for table: '))
+
+# Table user
 for x in range(0, 11):    
-    print(f'9 x {x} = { x * 9 }')
+    print(f'{table} x {x} = { x * table }')
 
-print('\n')    
-
-# Table 5
-for x in range(0, 11):
-    print(f'5 x {x} = { x * 5 }')
-
-print('\n')
