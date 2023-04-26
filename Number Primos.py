@@ -1,3 +1,5 @@
+
+
 s = 0
 c = 0
 for x in range(1, 501, 2):
@@ -17,4 +19,5 @@ for x in range(1, 501, 2):
         
         s += x 
         print(x, end = ' ')
+
 print('\n')
