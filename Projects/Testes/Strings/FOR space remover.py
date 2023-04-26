@@ -1,8 +1,12 @@
 diga = input('diga um texto: ')
+
+# este mecanismo é usado para retirar espaços ou pa adicionar elementos entre em vez dos espaços ===========
 fracao = diga.split()
 colar = ''.join(fracao)
-inverso = ''
+# ==========================================================================================================
 
+
+inverso = ''
 
 for elemento in range(len(colar) - 1, -1, -1):
     inverso += colar[elemento]
