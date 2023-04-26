@@ -14,4 +14,4 @@ for ano in range(1, 8):
     else:
         menor += 1
 
-print(f'in total {adult} people are adult and {menor} people are not adult ')
+print(f'\nin total {adult} people are adult and {menor} people are not adult \n')
