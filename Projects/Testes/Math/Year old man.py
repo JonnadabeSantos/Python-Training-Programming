@@ -9,7 +9,7 @@ for static in range( 1, 5 ):
 
     soma += idade
 
-    if sexy in 'Mm':
+    if sexy in 'Mm': # valida o "M" Maiúsculo ou menúsculo "m"
         if idade > man:
             man = idade
             nome = name
