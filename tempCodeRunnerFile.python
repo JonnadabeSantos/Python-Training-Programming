@@ -1,17 +1,50 @@
-from datetime import date
-data = date.today().year
+p1 = 0
+p2 = 0
+p3 = 0
+p4 = 0
+p5 = 0
 
-adult = 0
-menor = 0
+for wheight in range(1, 6):
+    w = float(input(f'Inform the wheight {wheight}º person: '))
+    
+    if wheight == 1:
+        p1 += w
 
-for ano in range(1, 8):
-    idade = int(input(f'inform the year of birth of the {ano}ª person: '))
-    maior = data - idade
 
-    if maior < 21:
-        adult += 1
+    elif wheight == 2:
+        p2 += w
+        if p2 > p1:
+            maior = p2
+            menor = p1
+        else:
+            maior = p1
+            menor = p2
+    
+
+    elif wheight == 3:
+        p3 += w
+        if p2 < p3 > p1:
+            maior = p3    
+        
+        elif p2 > p3 < p1:
+            menor = p3
+
+
+
+    elif wheight == 4:
+        p4 += w
+        if p3 < p4 > p2 and p4 > p1:
+            maior = p4
+
+        elif p3 > p4 < p2 and p4 < p1:
+            menor = p4 
 
     else:
-        menor += 1
+        p5 += w
+        if p4 < p5 > p3 and p2 < p5 > p1:
+            maior = p5
+        
+        elif p4 > p5 < p3 and p2 > p5 < p1:
+            menor = p5
 
-print(f'in total {adult} people are adult and {menor} people are not adult ')
+print(f'O maior peso é {maior}Kg e o menor peso é {menor}Kg')
