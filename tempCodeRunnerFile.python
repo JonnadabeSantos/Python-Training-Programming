@@ -1,22 +1,26 @@
-soma = 0
-man = 0
-woman = 0
+select = None
+print(title := '=' * 80, '\n')
 
-for static in range( 1, 5 ):
-    name = input(f'\nInform {static}º name: ')
-    idade = int(input(f'Inform {static}º years old: ' ))
-    sexy = input(f'You is "M" or "F" : ')
+option = '''
+[01] Python 
+[02] Java
+[03] Kotlin
+[04] C++
 
-    soma += idade
+'''
+print(menu := 'NO WELCOME TO YOUR STUDY HOURS HISTORY !'.center(80))
 
-    if sexy in 'Mm':
-        if idade > man:
-            man = idade
-            nome = name
+while not select:
+    print()
+    language = input(f'{option}Inform the Languege: ').isdigit()
+    if language.isdigit():
+        select = int(language)
+
+        if 0 < language <= 4:
+                print('z')    
+                  
+            
     else:
-        if idade < 20:
-            woman += 1
+        print('x')    
 
-print(f'\nA média da idade do grupo é { soma / 4 }')
-print(f'O nome do homem mais velho é {nome}')
-print(f'{woman} mulheres são menores que 20 anos\n')
+   
