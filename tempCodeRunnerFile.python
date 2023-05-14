@@ -1,13 +1,17 @@
-fist = int(input('Type fist: '))
-razon = int(input('Type razon: '))
-term = int(input('Type Term: '))
-count = 0
-soma = 0
+fibouser = int(input('Type Term: '))
 
-while count < term:
-    print(f'{fist}', end=' → ')
-    soma += fist
-    fist += razon
-    count += 1
+fibostart = 1
+fibomed = 0
 
-print(f'The Sum all term is {soma}')
+print(f'{fibomed} → {fibostart}', end='')
+
+cont = 3
+
+while cont <= fibouser:
+    fibonacci = fibostart + fibomed
+    print(f' → {fibonacci}', end='')
+    
+    fibomed = fibostart
+    fibostart = fibonacci
+
+    cont += 1
