@@ -9,8 +9,12 @@ while not cadastro in 'Nn':
     print(menu.center(60, ' '))
     print() 
 
+    while True:
+        sexo = input('Inform your gender [M/F]: ').strip() [0]
+        if sexo in 'MmFf':
+            break
+
     idade = int(input('Type Years Old: '))
-    sexo = input('Inform your gender [M/F]: ').strip() [0]
 
     if idade > 18:
         people += 1
