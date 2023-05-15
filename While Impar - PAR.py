@@ -35,3 +35,5 @@ if cont > 0:
     
 else:
     print(f'Desculpe você não ganhou nenhuma vez tente novamente !\n')
+
+print('Fim')

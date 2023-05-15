@@ -34,4 +34,6 @@ if cont > 0:
     print(f'Parabéns você Ganhou {cont} x consecutivas !\n')
     
 else:
-    print(f'Desculpe você não ganhou nenhuma vez tente novamente !\n')
+    print(f'Desculpe você não ganhou nenhuma vez tente novamente !\n\n')
+
+print('Fim')
