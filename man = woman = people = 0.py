@@ -1,7 +1,7 @@
 man = woman = people = 0
 
 cadastro = ' '
-while cadastro in 'Nn':
+while not cadastro in 'Nn':
     print('='*60)
     print()
 
@@ -22,7 +22,10 @@ while cadastro in 'Nn':
         woman += 1
     
     print()
-    cadastro = input('Do you wish to continue ? [S/N]: ').strip() [0]
+    while True:
+        cadastro = input('Do you wish to continue ? [S/N]: ').strip() [0]
+        if cadastro in 'SsNn':
+            break
 
 
 print('='*60)
