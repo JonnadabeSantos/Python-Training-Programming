@@ -1,7 +1,5 @@
 inicio = 'start'
-ced = 50
-total_ced = 0 
-fim = 1
+resaque = 'stop'
 opercao = 0
 
 while inicio == 'start':
@@ -14,17 +12,23 @@ while inicio == 'start':
     print('='*60)
     print()
 
+    ced = 50
+    total_ced = 0 
+    fim = 1
+    opercao = 0
 
     while opercao == 0:
         saque = input("What's value saq: ")
         if saque.isdigit():
             opercao = 1
-            valor = int(saque)           
+            valor = int(saque)
+            print('\nThis have value: ')           
             
 
         else:
             print('Opção inválida !')
             valor = -1
+            opercao = 0
             
         while valor != -1:
 
@@ -48,13 +52,26 @@ while inicio == 'start':
                     ced = 1
                     total_ced = 0
 
-                if valor == 0:                    
-                    valor = -1
-                    opercao = 1
-                    inicio = 'stop'
+                if valor == 0:
+                    print('\n')
+                    resaque = 'start'
+                    while resaque == 'start':
+                        
+                        novo_saque = str(input('Deseja fazer um Novo saque? [S/N]: ')).strip() [0]
+                        if novo_saque in 'Nn':
+                            resaque = 'stop'
+                            valor = -1
+                            opercao = 1
+                            inicio = 'stop'
+                        
+                        elif novo_saque in 'Ss':
+                            resaque = 'stop'
+                            valor = -1
+                            opercao = 1
+                            inicio = 'start'
 
         
    
 
-print('The End !')
+print('\nThank you see you later !')
  
