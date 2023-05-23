@@ -1,4 +1,4 @@
-number = ('Zero', 'One', 'Two', 'Three', 'For', 'Sex', 'Seven',
+number = ('Zero', 'One', 'Two', 'Three', 'For', 'Five', 'Sex', 'Seven',
 'Eight', 'Nine', 'Ten', 'eleven', 'Twelve', 'Thirteen', 'Forteen', 'Fiveteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen', 'Twenty')
 
 while True:
@@ -7,8 +7,7 @@ while True:
        
         index = int(user)
         if 0 <= index <= 20:
-            typed = number
-            print(f'You Typed', number[{index}])
+            print(f'You Typed', number[index])
             break
         
         else:
