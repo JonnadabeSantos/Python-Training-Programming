@@ -1,7 +1,11 @@
 from random import randint
-ai = randint(1,5)
-print(ai)
+Ai = ( randint(1,10), randint(1,10), randint(1,10), randint(1,10), randint(1,10) )
 
-for tuple in range(ai):
-    machine = (tuple)
-    print(machine)
+
+print(f'Os numeros sorteados foram:', end=' ')
+
+
+for tuple in Ai:    
+    print(tuple, end=' ')
+
+print(f'\nO maior numero foi {max(Ai)} e o menor foi {min(Ai)}')
