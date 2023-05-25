@@ -1,23 +1,17 @@
 number = []
 lop = 's'
-while True:
-    
-    if lop in 'Ss':    
+while True:   
         user = int(input('Type Number list: '))
-
         if user in number:
             print('Duplicate number! enter another number...\n')                    
         else:
             print('Number successfully added...\n')
             number.append(user)
         
-        while True:
-            lop = input('Do you wish to continue? [S/N]: ').strip() [0]
-            if lop in 'SsNn':
-                break
+        lop = input('Do you wish to continue? [S/N]: ').strip() [0] #No Validation !
+        if lop in 'Nn':
+            break
     
-    elif lop in 'Nn':
-        break            
-
-number.sort()              
+             
+number.sort()           
 print(f'Your list is {number}')
