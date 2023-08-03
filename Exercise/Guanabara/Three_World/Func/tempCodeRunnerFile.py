@@ -1,0 +1,1 @@
+print(f'\nCom { idade(nasc) } anos: {voto(idade(nasc))}')
