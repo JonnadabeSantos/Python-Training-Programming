@@ -11,7 +11,7 @@ def factor(number, show=False):
                 print(f'{n}', end=' x ')
                 if n == 2:
                     print( '1', end=' = ' )
-    print(f'{s}')
+    return s
 
 
 print( '-' * 40 )
@@ -20,4 +20,4 @@ w = input('want to see the calculation [Y/N}?: ')
 if w in 'Yy':
     w = True
 
-factor( x,w )
+print(factor( x,w ))

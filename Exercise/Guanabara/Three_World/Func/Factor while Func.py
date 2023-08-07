@@ -14,7 +14,7 @@ def fator(numero, show=False):
                     print(f'{cont}', end=' = ')
                 else:
                     print(f'{cont}', end=' x ')
-    print(soma)
+    return print(soma)
 
 
 print( '-' * 40)
