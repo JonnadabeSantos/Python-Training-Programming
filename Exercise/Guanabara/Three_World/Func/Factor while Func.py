@@ -4,12 +4,12 @@ def fator(numero, show=False):
         if cont == numero:
             cont -= 1
             soma = cont *  numero
-            if show == True:
+            if show:
                 print(f'{numero} x {cont}', end=' x ')
         elif cont > 1:
             cont -= 1
             soma *= cont
-            if show == True:
+            if show:
                 if cont == 1:
                     print(f'{cont}', end=' = ')
                 else:
