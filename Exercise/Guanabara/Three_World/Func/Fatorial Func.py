@@ -10,7 +10,7 @@ def factor(number, show=False):
             if show == True:
                 print(f'{n}', end=' x ')
                 if n == 2:
-                    print('1', end=' ')
+                    print( '1', end=' = ' )
     print(f'{s}')
 
 
@@ -19,7 +19,5 @@ x = int(input('number: '))
 w = input('want to see the calculation [Y/N}?: ')
 if w in 'Yy':
     w = True
-else:
-    w = False
 
 factor( x,w )
