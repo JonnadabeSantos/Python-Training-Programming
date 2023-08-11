@@ -2,21 +2,18 @@ def notas(valor):
     while True:
         turma = dict()
         aluno = list()
-        new = ' '
-        if perg in 'Ss':
-            new = 's'
+       
 
-        while True:
-            if new in 'Ss':
-                othe = float(input('Infome sua nota: '))            
-                aluno.append(othe)
-            else:
-                aluno.append(valor)
-            
+        while True:    
+            aluno.append(valor)            
             while True:
                 new = input('Deseja informar outra nota [S/N] ?: ')
                 if new in 'SsNn':
+                    if new in 'Ss':
+                        valor = float(input('Infome sua nota: $ '))
                     break
+                else:
+                    print('\nERROR ! Informe Sim ou Não: ')
             
             if new in 'Nn':
                 break
@@ -28,11 +25,19 @@ def notas(valor):
 
         print( '-' * 40 )
         print(turma)
-        perg = input('Deseja cadastrar um novo [S/N] ?: ')
+        while True:
+            perg = input('Deseja cadastrar um novo [S/N] ?: ')
+            if perg in 'Ss':
+                valor = float(input('Infome sua nota: @ '))
+                break
+            elif perg in 'Nn':
+                break
+            else:         
+                print('\nERROR ! Informe Sim ou Não: ')
         
         if perg in 'Nn':
             break
-        
+            
 
 infor = float(input('Infome sua nota: '))
 notas(infor)
