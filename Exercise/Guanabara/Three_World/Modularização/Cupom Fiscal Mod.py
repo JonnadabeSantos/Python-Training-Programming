@@ -1,4 +1,4 @@
-from Finac import moeda
+from Finac.Dinheiro import moeda
 
 
 valor = float(input('Type value: '))

@@ -17,8 +17,11 @@ def maior( * numb ):
         print(f'ao todo foram {len(numb)} valores')
     print(f'O Maior valor informado foi {max(numb)}')
     
-    
+
+valor = int(input('Type value: '))
+raize = int(input('Enter the raise: '))
+reduce = int(input('Enter the reduce: '))    
 maior(4)
 maior(2,3,4)
 maior(9,3,4,6)
-maior(0)
+maior( valor, raize, reduce )
