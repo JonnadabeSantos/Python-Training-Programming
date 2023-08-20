@@ -1,21 +1,17 @@
-from Data_science.save_dados import cadastrar, listar, sair
+from Data_science.save_dados import *
+from Data_science.Files import *
 
-linha = '-' * 40
-princ = 'MENU PRINCIPAL'.center(40)
+arq = 'homeoffice.txt'
+if arquivoExiste(arq):
+    print('Aquivo encontrado com sucesso!')
+else:
+    print('Arquivo não encontrado! ')
 
-menu = f'''
-{linha}
-{princ}
-{linha}
-01 Ver Cadastrados
-02 Novo Cadastro
-03 Sair
-
-'''
+menu([ 'Ver Cadastrados', 'Novo Cadastro', 'Sair'])
 
 while True:
     try:
-        opc = int(input(f'{menu}'))
+        opc = int(input(f'Selecione uma Opção: '))
         if 3 >= opc > 0:
             break
         else:
