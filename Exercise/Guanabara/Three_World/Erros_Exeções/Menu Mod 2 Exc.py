@@ -1,11 +1,12 @@
 from Data_science.save_dados import *
 from Data_science.Files import *
 
-arq = 'cx.txt'
+arq = 'Exercise\Guanabara\Three_World\Erros_Exeções\cx.txt'
 if arquivoExiste(arq):
     print('Aquivo encontrado com sucesso!')
 else:
     print('Arquivo não encontrado! ')
+    criarArquivo(arq)
   
 # menu([ 'Ver Cadastrados', 'Novo Cadastro', 'Sair'])
 
