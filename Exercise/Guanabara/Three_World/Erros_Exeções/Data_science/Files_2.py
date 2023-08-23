@@ -1,5 +1,3 @@
-from Data_science.save_dados import *
-
 def arquivoExiste(arquivo):
     try:        
         with open(arquivo, 'rt') as a: # 'rt vai ler um arquivo de texto 
@@ -17,12 +15,3 @@ def criarArquivo(nome):
         print('Houve um ERRO na criação do arquivo')
     else:
         print(f'Arquivo  " {nome} " criado com sucesso!')
-
-def lerArquivo(nome):
-    try:
-        a = open(nome, 'rt')
-    except:
-        print('Erro ao ler o arquivo')
-    else:
-        cabeçalho('PESSOAS CADASTRADAS')
-        print(a.read())
