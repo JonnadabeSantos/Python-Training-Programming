@@ -6,26 +6,28 @@ if not arquivoExiste(arq):
     criarArquivo(arq)
   
   
-menu([ 'Ver Cadastrados', 'Novo Cadastro', 'Sair'])
 
 while True:
-    try:
-        opc = int(input(f'Selecione uma Opção: '))
-        if 3 >= opc > 0:
-            if opc == 1:
-                lerArquivo(arq)
+    menu([ 'Ver Cadastrados', 'Novo Cadastro', 'Sair'])
+    opc = int(input(f'Selecione uma Opção: '))
+    if 3 >= opc > 0:
+        if opc == 1:
+            lerArquivo(arq)
                 
-            elif opc == 2:
-                cadastrar()
-            elif opc == 3:
-                sair()
-                break
+        elif opc == 2:
+            cabeçalho('NOVO CADASTRO')
+            nome = input('Nome-: ')
+            idade = int(input('Idade: '))
+            cadastrarNovo( arq, nome, idade )
+
+        elif opc == 3:
+            sair()
+            break
         else:
-            print('x')
+            print('\033[31m ERROR ! Digite um valor válido !\033[m')
+        
            
 
-    except(ValueError):
-        print('\033[31m ERROR ! Digite um valor válido !\033[m')
  
 
 
