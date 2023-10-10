@@ -10,7 +10,6 @@ class peolpe:
         mainMenu = [f'{key}' for key in self.__dict__.keys()]
         for ind, item in enumerate(mainMenu):
             print(f'{ ind + 1} -- {item}')
-        
     
         try:
             search = int(input(f'select what you want to search [ 1 to {len(mainMenu)}]: '))
@@ -49,8 +48,16 @@ class peolpe:
 
             else:
                 print(f'Type number between 1 to {len(mainMenu)}')    
+   
+  
+    def __str__(self):
+        return f'{self.__class__.__name__}: {", ".join( [ f"{ chave } = { valor }" for chave, valor in self.__dict__.items() ] )}'
+        
+
+
 
 
 
 test = peolpe(['bio','deco','caneco','fio'], ['liza','luiza','miliza','suiça'], ['bilio','sico','zico'], ['ema','max','fred','olaf','betove'])
-test.buscar()
+# test.buscar()
+print(test)
