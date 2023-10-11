@@ -3,61 +3,85 @@ from datetime import datetime
 class People: 
     corrent_year = datetime.now().year
 
-    def __init__(self, nome, idade, altura, trabalho, sexo, falando=False, comendo=False, andando=False,):
-        self.nome = nome
-        self.idade = idade
-        self.altura = altura
-        self.trabalho = trabalho
+    def __init__(self, name, year_old,height, work, sexo, speaking = False, Eating = False, walking = False,):
+        self.name = name
+        self.year_old = year_old
+        self.altura = height
+        self.work = work
         self.sexo = sexo
-        self.falando = falando
-        self.comendo = comendo
-        self.anando = andando
+        self.speaking = speaking
+        self.Eating = Eating
+        self.walking = walking
     
 
 
-    def comer(self, alimento):
-         if self.comendo:
-            print(f'{self.nome} já esta comendo.')
+    def Eat(self, food):
+         if self.Eating:
+            print(f'{self.name} already Eating.')
             return
-         if self.falando:
-             print(f'{self.nome} Não pode comer falando !')
+         if self.speaking:
+             print(f"{self.name} can't to Eat speaking !")
              return
 
-         print(f'{self.nome} está comendo {alimento}')
-         self.comendo = True
+         print(f'{self.name} is Eating {food}')
+         self.Eating = True
 
 
-    def ParaComer(self):
-        if not self.comendo:
-            print(f'{self.nome} não está comendo.')
+    def StopEat(self):
+        if not self.Eating:
+            print(f'{self.name} not Eating.')
             return
         
-        print(f'{self.nome} stopped eating !')
-        self.comendo = False
+        print(f'{self.name} stopped Eating !')
+        self.Eating = False
 
 
 
-    def falar(self, assunto):
-        if self.comendo:
-            print(f"{self.nome} Can't talk while eating.")
+    def Speak(self, about):
+        if self.Eating:
+            print(f"{self.name} Can't talk while Eating.")
             return
-        if self.falando:
-            print(f'{self.nome} Already talking.')
+        if self.speaking:
+            print(f'{self.name} Already talking.')
+            return
 
-        print(f'{self.nome} Is talking about {assunto}')
-        self.falando = True
+        print(f'{self.name} Is talking about {about}')
+        self.speaking = True
 
-    def PararFalar(self):
-        if not self.falando:
-            print(f'{self.nome} Not talking !')
+    def StopSpeak(self):
+        if not self.speaking:
+            print(f'{self.name} Not talking !')
             return
         
-        print(f'{self.nome} Stopped talking !')
-        self.falando = False
+        print(f'{self.name} Stopped talking !')
+        self.speaking = False
 
-    def Andar(self):
-        if self.anando:
-            print('You are already walking: ')
+
+
+    def Walk(self):
+        if self.walking:
+            print(f'You are already walking ! ')
+            return
+        
+        if self.Eating:
+            print(f"{self.name} Can't to eat walking ! ")
+            return
+
+
+        print(f'{self.name} are walking')
+        self.walking = True
+
+
+    def StopWalk(self):
+        if not self.walking:
+            print(f'You are not walking !')
+            return
+        
+        print(f'{self.name} stopped walking !')
+        self.walking = False
+
+
+
 
     def Get_corrent_year(self):
-        return self.corrent_year - self.idade
+        return self.corrent_year - self.year_old
