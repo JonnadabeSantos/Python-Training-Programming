@@ -38,9 +38,10 @@ while True:
     
             welcome('Select People')
 
-            for ind in range( 0, len( dictclass ) ):
-                for k in dictclass.keys():
-                    print(f'{ind + 1} - {k}')
+            cont = 1
+            for k in dictclass.keys():
+                print(f'{cont} - {k}')
+                cont += 1
             
             select = int(input('Select People: '))
             welcome(f'You select {people_list[select -1]["name"]}')
@@ -49,34 +50,31 @@ while True:
             
             while True:
 
-                MenuLista = '''
-                1 - Speak
-                2 - Eat
-                3 - Walk
-                4 - Stop walk
-                5 - Stop eat
-                6 - Stop speak 
-                '''
-                Menu_select = int(input(f'{MenuLista}Select opction: '))
+                MenuLista = ['Speak', 'Eat', 'Walk', 'Stop walk', 'Stop eat', 'Stop speak ']
+                print()
+                for i, x in enumerate( MenuLista ):
+                    print(f'{i +1} - {x}')
+
+                Menu_select = int(input(f'Select opction: '))
 
                 print()
                 if Menu_select == 1:
-                    user.Speak(input('Talk about the topic: '))
+                    dictclass[people_list[select -1]['name']].Speak(input('Talk about the topic: '))
 
                 elif Menu_select == 2:
-                    user.Eat(input('What do you want to eat: '))
+                    dictclass[people_list[select -1]['name']].Eat(input('What do you want to eat: '))
 
                 elif Menu_select == 3:
-                    user.Walk()
+                    dictclass[people_list[select -1]['name']].Walk()
 
                 elif Menu_select == 4:
-                    user.StopWalk()
+                    dictclass[people_list[select -1]['name']].StopWalk()
 
                 elif Menu_select == 5:
-                    user.StopEat()
+                    dictclass[people_list[select -1]['name']].StopEat()
 
                 elif Menu_select == 6:
-                    user.StopSpeak()
+                    dictclass[people_list[select -1]['name']].StopSpeak()
 
                 else:
                     break
@@ -85,7 +83,7 @@ while True:
             if new_people in 'Nn':
                 break
     
-    break
+        break
 
 
            
