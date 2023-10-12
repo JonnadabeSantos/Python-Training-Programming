@@ -59,10 +59,10 @@ while True:
 
                 print()
                 if Menu_select == 1:
-                    dictclass[people_list[select -1]['name']].Speak(input('Talk about the topic: '))
+                    dictclass[people_list[select -1]['name']].Speak()
 
                 elif Menu_select == 2:
-                    dictclass[people_list[select -1]['name']].Eat(input('What do you want to eat: '))
+                    dictclass[people_list[select -1]['name']].Eat()
 
                 elif Menu_select == 3:
                     dictclass[people_list[select -1]['name']].Walk()

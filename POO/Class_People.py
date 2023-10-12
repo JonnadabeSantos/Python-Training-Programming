@@ -15,16 +15,17 @@ class People:
     
 
 
-    def Eat(self, food):
-         if self.Eating:
+    def Eat(self, food = ''):
+        if self.Eating:
             print(f'{self.name} already Eating.')
             return
-         if self.speaking:
-             print(f"{self.name} can't to Eat speaking !")
-             return
-
-         print(f'{self.name} is Eating {food}')
-         self.Eating = True
+        if self.speaking:
+            print(f"{self.name} can't to Eat speaking !")
+            return
+         
+        food = input('What do you want to eat: ')
+        print(f'{self.name} is Eating {food}')
+        self.Eating = True
 
 
     def StopEat(self):
@@ -37,14 +38,14 @@ class People:
 
 
 
-    def Speak(self, about):
+    def Speak(self, about = ''):
         if self.Eating:
             print(f"{self.name} Can't talk while Eating.")
             return
         if self.speaking:
             print(f'{self.name} Already talking.')
             return
-
+        about = input('Talk about the topic: ')
         print(f'{self.name} Is talking about {about}')
         self.speaking = True
 
