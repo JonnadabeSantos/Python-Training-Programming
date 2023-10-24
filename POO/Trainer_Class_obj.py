@@ -1,4 +1,4 @@
-class peolpe:
+class People:
     def __init__(self, men, weman, child, animals):
         self.men = men
         self.weman = weman
@@ -58,6 +58,6 @@ class peolpe:
 
 
 
-test = peolpe(['bio','deco','caneco','fio'], ['liza','luiza','miliza','suiça'], ['bilio','sico','zico'], ['ema','max','fred','olaf','betove'])
+test = People(['bio','deco','caneco','fio'], ['liza','luiza','miliza','suiça'], ['bilio','sico','zico'], ['ema','max','fred','olaf','betove'])
 # test.buscar()
 print(test)
