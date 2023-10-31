@@ -31,7 +31,7 @@ class Product:
                     if ind == 0:
                         n1 = select * 10
                     
-                    elif ind == len( valid ) - 1:
+                    else:
                         n2 = select
                         value = n1 + n2
 
@@ -42,7 +42,7 @@ class Product:
                     elif ind == 1:
                         n2 = select * 10
                     
-                    elif ind == len( valid ) - 1:
+                    else:
                         n3 = select 
                         value = n1 + n2 + n3
             
