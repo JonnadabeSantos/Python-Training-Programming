@@ -18,46 +18,32 @@ class Product:
         if isinstance( value, str ):
             #value = float( value.replace( 'R$', '' ) )
            
-           # My Aplication !
+            # My Aplication !
             valid = []
             for number in value:
                 if number.isdigit():
                     valid.append( float( number ) )
                     print(f'{number} is number valid !')
-                
-            print(valid, len( valid ) )
+
+            cont = value = 0
+            cont = len( valid )
+
             for ind, select in enumerate( valid ):
-                if len( valid ) == 2:
-                    if ind == 0:
-                        n1 = select * 10
-                    
-                    else:
-                        n2 = select
-                        value = n1 + n2
 
-                elif len( valid ) == 3:
-                    if ind == 0:
-                        n1 = select * 100
+                if ind == 0 or cont != 1:
+                    cont -= 1
+                    value += select * ( 10 ** cont )
 
-                    elif ind == 1:
-                        n2 = select * 10
-                    
-                    else:
-                        n3 = select 
-                        value = n1 + n2 + n3
-            
+                else:
+                    value += select
+                    print(f'Total {value:.2f} R$')
+           
             valid.clear()
                     
-        self._buy = value
+        self._buy = value   
 
 
-
-                            
-
-
-
-
-x = Product( 'T-shit', 'R%*95 %6*' )
+x = Product( 'T-shit', '6R1%*5 %6*0' )
 x.discount( 15 )
 print( x.buy )
 
