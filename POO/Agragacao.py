@@ -6,6 +6,7 @@ class CarrinhoDeCompra:
         self.produtos.append(produto)
 
     def lista_produto( self ):
+        print( self.produtos.produto )
         for produto in self.produtos:
             print( produto.nome, produto.valor )
     

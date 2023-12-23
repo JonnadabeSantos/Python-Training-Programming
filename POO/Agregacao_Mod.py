@@ -12,3 +12,4 @@ carrinho.inserir_produtos( p3 )
 
 carrinho.lista_produto()
 print( carrinho.soma_total() )
+
