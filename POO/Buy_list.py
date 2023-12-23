@@ -28,6 +28,6 @@ class BuyProduct:
                      }
 
 
-    def __init__( self, name, valor ) -> None:
+    def __init__( self, name, valor ):
         self.name = name
         self.valor = valor
