@@ -4,10 +4,18 @@ list = BuyProduct.list_products
 
 while True:
     for key, val in list.items():
-        if key < 10:
-            print( f'0{key} - {val[0]:<15} R$ {val[1]}' )
-        else:
-            print( f'{key:<2} - {val[0]:<15} R$ {val[1]}' )
+        #I just wanted to test my formatting skills
+        list[key] [1] = float( list[key] [1] ) # Add decimals ( .0 )
+        list[key] [1] = str( list[key] [1] )
+        if '.0' in list[key] [1]:
+            list[key] [1] = list[key] [1].replace('.0','.00')
+
+        if key < 10:        
+            print( f'0{key} - {val[0]:<15} R$ {val[1].replace('.',',')}' )
+        else:           
+            print( f'{key:<2} - {val[0]:<15} R$ {val[1].replace('.',',')}' )
+
+        list[key] [1] = float( list[key] [1] ) # returns the original value
 
     try:
         product = int( input( '\nSelect the product: ' ) )
@@ -19,7 +27,12 @@ while True:
         while True:
     
             try:
-                price = float( input( '\nPay the price: ' ) )
+                price = input( '\nPay the price: ' )
+                if ',' in price:
+                    price = price.replace( ',', '.' )
+                price = float( price )
+                print(price)
+
             except:
                 print( 'Number Invalid!' )
             else:
