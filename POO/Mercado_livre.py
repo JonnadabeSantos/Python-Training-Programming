@@ -1,7 +1,7 @@
 from Buy_list import *
 
 list = BuyProduct.list_products
-new_client = True
+client = True
 confirmed_purchase = {}
 
 while True:
@@ -19,9 +19,9 @@ while True:
 
         list[key] [1] = float( list[key] [1] ) # returns the original value
 
-    if new_client:
-        client_new = input( '\nType client name: ')
-        confirmed_purchase[client_new] = {}
+    if client:
+        new_client = input( '\nType client name: ')
+        confirmed_purchase[new_client] = {}
 
     try:
         product = int( input( '\nSelect the product: ' ) )
@@ -45,10 +45,11 @@ while True:
                     print( 'Product added successfully' )
                     new_purchase = input( 'Do you want to make a new purchase [Y/N]?: ' )
 
-                    confirmed_purchase.append( BuyProduct( list[product] [0], price ) )
-                    break
+                    # ERRRRROOOOOOR !!!!!!!!!!
+                    confirmed_purchase[new_client].update( BuyProduct( list[product] [0], price ) )
                     
-                    
+                    if new_purchase in 'YyNn':
+                        break
                 else:
                     print( 'Incorrect Value!' )
                 
