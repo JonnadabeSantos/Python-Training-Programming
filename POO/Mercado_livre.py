@@ -52,8 +52,18 @@ while True:
                     print( 'Product added successfully' )
                     new_purchase = input( 'Do you want to make a new purchase [Y/N]?: ' )
                     
-                    if new_purchase in 'YyNn':
+                    if new_purchase in 'Yy':
+                        NEW_client = input( 'Do you want to buy different name ? [Y/N]: ')
+                        if NEW_client in 'Yy':
+                            client = True
+                            break
+                        
+                        elif NEW_client in 'Nn':
+                            break
+                    
+                    elif new_purchase in 'Nn':
                         break
+
                 else:
                     print( 'Incorrect Value!' )
                 
