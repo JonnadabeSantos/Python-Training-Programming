@@ -1,9 +1,19 @@
 class ShoppingCart:
     def __init__(self):
-        self.__products = []
+        self.__products = {}
 
-    def insert_product( self, buy ):
-        self.__products.append( buy )
+    def insert_product( self, key, name, buy ):
+        self.__products[key] = {}
+        if key not in self.__products:
+            self.__products[key].update( { name: buy } )
+            print('x')
+        else:
+            self.__products[key].update( { name: buy } )
+            print('z')
+        
+        print( self.__products )
+        print('ok')
+
     
     def list_shoppingCart( self ):
         for product in self.__products:
@@ -28,6 +38,7 @@ class BuyProduct:
                      }
 
 
-    def __init__( self, name, valor ):
+    def __init__( self, key, name, valor ):
+        self.key = key
         self.name = name
         self.valor = valor

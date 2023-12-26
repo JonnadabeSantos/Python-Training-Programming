@@ -21,9 +21,8 @@ while True:
 
     if client:
         new_client = input( '\nType client name: ')
-        confirmed_purchase[new_client] = {}
+        confirmed_purchase = ShoppingCart()
         client = False
-        print( confirmed_purchase )
 
     try:
         product = int( input( '\nSelect the product: ' ) )
@@ -39,16 +38,16 @@ while True:
                 if ',' in price:
                     price = price.replace( ',', '.' )
                 price = float( price )
-                print( price )
 
             except:
                 print( 'Number Invalid!' )
             else:
                 if price == list[product] [1]:
-                    buy = BuyProduct( list[product] [0], price )
+                    buy = BuyProduct( new_client, list[product] [0], price )
+                    
+                    confirmed_purchase.insert_product( buy.key, buy.name, buy.valor )
 
-                    confirmed_purchase[new_client].update( {buy.name: buy.valor} )
-                    print( confirmed_purchase )
+                    # confirmed_purchase[new_client].update( {buy.name: buy.valor} )
                     print( 'Product added successfully' )
                     new_purchase = input( 'Do you want to make a new purchase [Y/N]?: ' )
                     
@@ -71,4 +70,3 @@ while True:
         break
 
 
-print(confirmed_purchase)
