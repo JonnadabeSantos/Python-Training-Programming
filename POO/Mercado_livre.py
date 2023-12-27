@@ -1,8 +1,8 @@
 from Buy_list import *
 
 list = BuyProduct.list_products
+confirmed_purchase = ShoppingCart()
 client = True
-confirmed_purchase = {}
 
 while True:
     for key, val in list.items():
@@ -20,10 +20,11 @@ while True:
         list[key] [1] = float( list[key] [1] ) # returns the original value
 
     if client:
+        # confirmed_purchase.insert_product.client = True
         new_client = input( '\nType client name: ')
-        confirmed_purchase = ShoppingCart()
         client = False
-
+        novo = True
+        print('LK')
     try:
         product = int( input( '\nSelect the product: ' ) )
     except:
@@ -43,16 +44,36 @@ while True:
                 print( 'Number Invalid!' )
             else:
                 if price == list[product] [1]:
-                    buy = BuyProduct( new_client, list[product] [0], price )
-                    
-                    confirmed_purchase.insert_product( buy.key, buy.name, buy.valor )
+                    buy = BuyProduct( list[product] [0], price )
 
                     # confirmed_purchase[new_client].update( {buy.name: buy.valor} )
+                    if novo:
+                        confirmed_purchase.insert_product( new_client, buy.name, buy.valor, True )
+                        novo = False
+                    else:
+                        confirmed_purchase.insert_product( new_client, buy.name, buy.valor )
+
                     print( 'Product added successfully' )
+                    
+
                     new_purchase = input( 'Do you want to make a new purchase [Y/N]?: ' )
                     
                     if new_purchase in 'YyNn':
-                        break
+                        if new_purchase in 'Yy':
+                        
+                            new_buy = input( 'You want to add a different name: ')
+                            if new_buy in 'Yy':
+                                client = True
+                                print('x')
+                                break
+
+                            elif new_buy in 'Nn':                               
+                                print('K')
+                                break
+                        
+                        elif new_purchase in 'Nn':
+                            break
+
                 else:
                     print( 'Incorrect Value!' )
                 

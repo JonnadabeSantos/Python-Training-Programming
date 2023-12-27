@@ -1,17 +1,20 @@
 class ShoppingCart:
     def __init__(self):
         self.__products = {}
+        print('Criou')
 
-    def insert_product( self, key, name, buy ):
-        self.__products[key] = {}
-        if key not in self.__products:
-            self.__products[key].update( { name: buy } )
-            print('x')
-        else:
-            self.__products[key].update( { name: buy } )
-            print('z')
+    def insert_product( self,new_client, name, buy, client=False ):
         
+        denovo = new_client
+
+        if client:
+            self.__products[denovo] = {}
+            print('new')
+            client = False
+
+        self.__products[denovo].update( { name: buy } )
         print( self.__products )
+        
         print('ok')
 
     
@@ -38,7 +41,7 @@ class BuyProduct:
                      }
 
 
-    def __init__( self, key, name, valor ):
-        self.key = key
+    def __init__( self, name, valor ):
         self.name = name
         self.valor = valor
+        print('cadastrou')
