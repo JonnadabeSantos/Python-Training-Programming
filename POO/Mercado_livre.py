@@ -7,8 +7,9 @@ client = True
 while True:
     for key, val in list.items():
         #I just wanted to test my formatting skills
-        list[key] [1] = str( float( list[key] [1] ) ) # Add decimals ( .0 )
-        # list[key] [1] = str( list[key] [1] )
+        list[key] [1] = float( list[key] [1] )  # Add decimals ( .0 )
+        list[key] [1] = str( list[key] [1] )
+        # list[key] [1] = str( float( list[key] [1] ) ) <<<<<< FORMA DIRETA
         if '.0' in list[key] [1]:
             list[key] [1] = list[key] [1].replace('.0','.00')
 
@@ -23,7 +24,7 @@ while True:
         # confirmed_purchase.insert_product.client = True
         new_client = input( '\nType client name: ')
         client = False
-        novo = True
+        new = True
         print('LK')
     try:
         product = int( input( '\nSelect the product: ' ) )
@@ -47,9 +48,9 @@ while True:
                     buy = BuyProduct( list[product] [0], price )
 
                     # confirmed_purchase[new_client].update( {buy.name: buy.valor} )
-                    if novo:
+                    if new:
                         confirmed_purchase.insert_product( new_client, buy.name, buy.valor, True )
-                        novo = False
+                        new = False
                     else:
                         confirmed_purchase.insert_product( new_client, buy.name, buy.valor )
 
