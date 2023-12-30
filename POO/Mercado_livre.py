@@ -7,8 +7,8 @@ client = True
 while True:
     for key, val in list.items():
         #I just wanted to test my formatting skills
-        list[key] [1] = float( list[key] [1] ) # Add decimals ( .0 )
-        list[key] [1] = str( list[key] [1] )
+        list[key] [1] = str( float( list[key] [1] ) ) # Add decimals ( .0 )
+        # list[key] [1] = str( list[key] [1] )
         if '.0' in list[key] [1]:
             list[key] [1] = list[key] [1].replace('.0','.00')
 

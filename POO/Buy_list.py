@@ -1,21 +1,21 @@
 class ShoppingCart:
     def __init__(self):
         self.__products = {}
-        print('Criou')
 
-    def insert_product( self,new_client, name, buy, client=False ):
+    def insert_product( self,key, name, buy, client=False ):
         
-        denovo = new_client
+        # key = new_client
 
         if client:
-            self.__products[denovo] = {}
+            self.__products[key] = {}
             print('new')
             client = False
-
-        self.__products[denovo].update( { name: buy } )
-        print( self.__products )
         
-        print('ok')
+        else:
+            self.__products[key].update( { name: buy } )
+            print( self.__products )
+            
+            print('ok')
 
     
     def list_shoppingCart( self ):
