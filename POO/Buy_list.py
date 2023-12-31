@@ -5,10 +5,10 @@ class ShoppingCart:
     def insert_product( self,key, name, buy, client=False ):
        
         if client:
-            self.__products[key] = { name: buy }
+            self.__products[key] = [ [ name, buy ] ]
         
         else:
-            self.__products[key].update( { name: buy } )
+            self.__products[key].append( [ name, buy ] )
             
         print( self.__products )
 
