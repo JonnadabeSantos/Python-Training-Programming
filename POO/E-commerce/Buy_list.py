@@ -1,3 +1,5 @@
+from menus import linha, cabeçalho
+
 class ShoppingCart:
     def __init__(self):
         self.__products = {}
@@ -15,6 +17,7 @@ class ShoppingCart:
     
     def list_shoppingCart( self ):
         cont = 1
+        print( cabeçalho( 'Client Select' ) )
 
         for key in self.__products.keys():
             print( f'{ cont } - { key }' )
