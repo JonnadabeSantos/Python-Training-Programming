@@ -14,8 +14,11 @@ class ShoppingCart:
 
     
     def list_shoppingCart( self ):
-        for product in self.__products:
-            print( f'{product.name} - {product.valor}' )
+        cont = 1
+
+        for key in self.__products.keys():
+            print( f'{ cont } - { key }' )
+            cont += 1
 
 class BuyProduct:
     list_products = { 1:[ 'Glasses',    12.25 ], 

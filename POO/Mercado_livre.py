@@ -21,11 +21,9 @@ while True:
         list[key] [1] = float( list[key] [1] ) # returns the original value
 
     if client:
-        # confirmed_purchase.insert_product.client = True
         new_client = input( '\nType client name: ')
         client = False
         new = True
-        print('LK')
     try:
         product = int( input( '\nSelect the product: ' ) )
     except:
@@ -65,11 +63,9 @@ while True:
                             new_buy = input( 'You want to add a different name: ')
                             if new_buy in 'Yy':
                                 client = True
-                                print('x')
                                 break
 
                             elif new_buy in 'Nn':                               
-                                print('K')
                                 break
                         
                         elif new_purchase in 'Nn':
@@ -81,4 +77,4 @@ while True:
     if new_purchase in 'Nn':
         break
 
-
+confirmed_purchase.list_shoppingCart()
