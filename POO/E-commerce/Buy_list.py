@@ -1,4 +1,4 @@
-from menus import linha, cabeçalho
+from menus import *
 
 class ShoppingCart:
     def __init__(self):
@@ -17,6 +17,7 @@ class ShoppingCart:
     
     def list_shoppingCart( self ):
         cont = 1
+        summ = 0
         keyclients = []
         print( cabeçalho( 'Client Select' ) )
 
@@ -25,11 +26,21 @@ class ShoppingCart:
             print( f'{ cont } - { key }' )
             cont += 1
         
-        select = int( input( 'Select purchases by customers: ' ) )
-        # for selected in keyclients:
+        select = int( input( '\nSelect purchases by customers: ' ) )
         for key in self.__products.keys():
             if keyclients[select - 1] == key:
-                print( f'{key}' )
+                print( cabeçalho( f"These are {key}'s purchases" ) )
+                
+                for ind, buyed in enumerate( self.__products[ keyclients[ select - 1 ] ] ):                                        
+                    summ += buyed[1]
+                    price = COMAdecimal( buyed[1] )
+                    
+                    print( f'{ind + 1}º - {buyed[0]:.<25} R$ {price}' )                    
+                
+                summ = COMAdecimal ( summ )
+                Total_purchased = 'Total purchased'
+                print( f'\n{Total_purchased:.<30} R$ {summ}')
+
 
 
 class BuyProduct:
