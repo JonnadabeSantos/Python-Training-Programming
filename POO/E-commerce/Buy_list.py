@@ -17,11 +17,20 @@ class ShoppingCart:
     
     def list_shoppingCart( self ):
         cont = 1
+        keyclients = []
         print( cabeçalho( 'Client Select' ) )
 
         for key in self.__products.keys():
+            keyclients.append( key )
             print( f'{ cont } - { key }' )
             cont += 1
+        
+        select = int( input( 'Select purchases by customers: ' ) )
+        # for selected in keyclients:
+        for key in self.__products.keys():
+            if keyclients[select - 1] == key:
+                print( f'{key}' )
+
 
 class BuyProduct:
     list_products = { 1:[ 'Glasses',    12.25 ], 
