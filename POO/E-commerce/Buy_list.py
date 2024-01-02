@@ -66,3 +66,16 @@ class BuyProduct:
         self.name = name
         self.valor = valor
         print('cadastrou')
+    
+    @property
+    def valor( self ):
+        return self._valor
+    
+    @valor.setter
+    def valor( self, val ):
+        if isinstance( val, str ):
+            val = float( val )
+            print('validou')
+            
+        self._valor = val
+        
