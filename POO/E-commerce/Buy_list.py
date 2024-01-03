@@ -4,11 +4,9 @@ class ShoppingCart:
     def __init__(self):
         self.__products = {}
 
-    def insert_product( self,key, name, buy, client=False ):
-       
+    def insert_product( self,key, name, buy, client=False ):       
         if client:
-            self.__products[key] = [ [ name, buy ] ]
-        
+            self.__products[key] = [ [ name, buy ] ]        
         else:
             self.__products[key].append( [ name, buy ] )
             
