@@ -21,8 +21,8 @@ class Caneta:
         self.__marca = marca
     
     @property
-    def Caneta( self, marca ):
-        self.__marca = marca
+    def marca( self ):
+        return self.__marca
 
     def escrever( self ):
         print( 'Caneta está escrevendo...' )
@@ -39,9 +39,14 @@ maquina = MaquinaDeEscrever()
 
 
 
-escritor.ferramenta = caneta # Assicia com tudo quem tem na Classe Caneta
+escritor.ferramenta = caneta # Associa com tudo quem tem na Classe Caneta
 escritor.ferramenta.escrever()
+print( 'Escritor >> ', escritor.ferramenta.marca )
+print( 'Caneta >>' , caneta.marca )
+del escritor
 
-escritor.ferramenta = maquina # Assicia com tudo quem tem na Classe Caneta
-escritor.ferramenta.escrever()
+print( 'Caneta ON >>' , caneta.marca )
+# escritor.ferramenta = maquina # Associa com tudo quem tem na Classe Maquina
+# escritor.ferramenta.escrever()
+# print( 'Escritor >> ', escritor.ferramenta.escrever() )
 
