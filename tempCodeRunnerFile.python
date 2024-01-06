@@ -1,0 +1,17 @@
+class Transporte:
+    def andar( self ):
+        self.walk = 'Está andando.....'
+        print(self.walk)
+
+        
+
+class Bike( Transporte ):
+    def andar( self ): pass
+    print( f'faz' , andar().walk )
+
+
+def movier( obj ):
+    obj.andar()
+
+
+movier(Transporte())
