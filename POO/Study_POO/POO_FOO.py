@@ -5,7 +5,7 @@ class Foo:
     @property
     def x(self):
         print( 'x' )
-        return self._x or 1
+        return self._x or 1 # se nao existir valor ele atribui (1)
 
     @x.setter
     def x(self, value):
@@ -14,7 +14,7 @@ class Foo:
 
     @x.deleter
     def x(self):
-        self._x = 0
+        self._x = 0 # "resetando" o valor
 
 
 foo = Foo(10)
