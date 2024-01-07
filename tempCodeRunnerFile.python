@@ -6,12 +6,12 @@ class Transporte:
         
 
 class Bike( Transporte ):
-    def andar( self ): pass
-    print( f'faz' , andar().walk )
+    def andar( self ):
+        print( f'faz' , {self.walk} )
 
 
 def movier( obj ):
     obj.andar()
 
 
-movier(Transporte())
+movier(Bike())
